@@ -116,7 +116,7 @@ jobs:
         with:
           working_directory: terraform
           format: sarif
-          sarif_file: tfsec-results.sarif
+          additional_args: --out tfsec-results.sarif
           soft_fail: true
 
       - name: Upload tfsec results
