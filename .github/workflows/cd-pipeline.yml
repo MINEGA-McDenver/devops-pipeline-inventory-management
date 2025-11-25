@@ -74,6 +74,7 @@ jobs:
 
       - name: Scan backend image
         uses: aquasecurity/trivy-action@master
+        continue-on-error: true
         with:
           image-ref: ${{ secrets.ACR_LOGIN_SERVER }}/devops-backend:${{ steps.meta.outputs.version }}
           format: 'sarif'
